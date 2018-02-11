@@ -54,7 +54,9 @@ module.exports = {
     // 禁止无法识别的为元素值 伪元素：对元素中的特定内容进行操作 ::before ::after ::selection ...
     'selector-pseudo-element-no-unknown': true,
     // 禁止无法识别的选择器
-    'selector-type-no-unknown': ['/^app-'],
+    'selector-type-no-unknown': [true, {
+      ignoreNamespaces: ['/^app-/']
+    }],
 
     // Media feature
     // 禁止无法识别的media属性值
@@ -94,13 +96,13 @@ module.exports = {
 
     // Function
     // 函数黑名单
-    'function-blacklist': [],
+    // 'function-blacklist': [],
     // 函数白名单
     // 'function-whitelist': [],
     // 禁止scheme relative url
     // 'function-url-no-scheme-relative': true,
     // url黑名单
-    'function-url-scheme-blacklist': [],
+    // 'function-url-scheme-blacklist': [],
     // url白名单
     // 'function-url-scheme-whitelist': ['/^http/'],
 
@@ -111,8 +113,7 @@ module.exports = {
     'time-min-milliseconds': 100,
 
     // Unit
-    // 单位白名单
-    'unit-blacklist': [],
+    // 'unit-blacklist': [],
     // 'unit-whitelist': [],
 
 
@@ -129,7 +130,7 @@ module.exports = {
     // 'custom-property-pattern': '',
 
     // Property
-    'property-blacklist': [],
+    // 'property-blacklist': [],
     'property-no-vendor-prefix': true,
     // 'property-whitelist': [],
 
@@ -138,24 +139,24 @@ module.exports = {
     'declaration-block-no-redundant-longhand-properties': true,
     // 禁止!important声明
     'declaration-no-important': true,
-    'declaration-property-unit-blacklist': {
-      '/^animation/': ['s']
-    },
-    'declaration-property-unit-whitelist': {
-      'font-size': ['px', 'rem', 'em']
-    },
-    'declaration-property-value-blacklist': {
-    },
-    'declaration-property-value-whitelist': {
-    },
+    // 'declaration-property-unit-blacklist': {
+    //   '/^animation/': ['s']
+    // },
+    // 'declaration-property-unit-whitelist': {
+    //   'font-size': ['px', 'rem', 'em']
+    // },
+    // 'declaration-property-value-blacklist': {
+    // },
+    // 'declaration-property-value-whitelist': {
+    // },
 
     // Declaration block
     // 每行允许声明一个属性
-    'declaration-block-single-line-max-declarations': 1
+    'declaration-block-single-line-max-declarations': 1,
 
 
     // Selector
-    'selector-attribute-operator-blacklist': [],
+    // 'selector-attribute-operator-blacklist': [],
     // 'selector-attribute-operator-whitelist': [],
     // 类名命名规则
     // 'selector-class-pattern': '',
@@ -190,14 +191,13 @@ module.exports = {
     'font-weight-notation': 'numeric',
 
     // Function
-    'function-comma-newline-after': 'always',
-    'function-comma-newline-before': 'never-multi-line',
-    'function-comma-space-after': 'always',
+    'function-comma-newline-after': 'always-multi-line',
+    'function-comma-space-after': 'always-single-line',
     'function-comma-space-before': 'never',
     'function-max-empty-lines': 0,
     'function-name-case': 'lower',
-    'function-parentheses-newline-inside': 'always',
-    'function-parentheses-space-inside': 'never',
+    'function-parentheses-newline-inside': 'always-multi-line',
+    'function-parentheses-space-inside': 'never-single-line',
     'function-url-quotes': 'never',
     'function-whitespace-after': 'always',
 
@@ -218,9 +218,8 @@ module.exports = {
     'value-keyword-case': 'lower',
 
     // Value List
-    'value-list-comma-newline-after': 'never-multi-line',
-    'value-list-comma-newline-before': 'never-multi-line',
-    'value-list-comma-space-after': 'always',
+    'value-list-comma-newline-after': 'always-multi-line',
+    'value-list-comma-space-after': 'always-single-line',
     'value-list-comma-space-before': 'never',
     'value-list-max-empty-lines': 0,
 
@@ -242,7 +241,7 @@ module.exports = {
     // Declaration
     'declaration-bang-space-after': 'never',
     'declaration-bang-space-before': 'always',
-    'declaration-colon-space-after': 'always',
+    'declaration-colon-space-after': 'always-single-line',
     'declaration-colon-space-before': 'never',
     'declaration-block-semicolon-newline-after': 'always',
     'declaration-block-semicolon-newline-before': 'never-multi-line',
@@ -253,12 +252,10 @@ module.exports = {
 
     // Block
     'block-closing-brace-empty-line-before': 'never',
-    'block-closing-brace-newline-after': 'always-multi-line',
+    'block-closing-brace-newline-after': 'always',
     'block-closing-brace-newline-before': 'always-multi-line',
-    'block-closing-brace-space-after': 'always-single-line',
     'block-closing-brace-space-before': 'always-single-line',
     'block-opening-brace-newline-after': 'always-multi-line',
-    'block-opening-brace-newline-before': 'never-multi-line',
     'block-opening-brace-space-after': 'always-single-line',
     'block-opening-brace-space-before': 'always',
 

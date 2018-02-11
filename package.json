@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/lovesora/stylelintrc#readme",
   "devDependencies": {
-    "eslintrc": "^1.0.4"
+    "eslintrc": "^1.0.4",
+    "stylelintrc": "^1.0.0"
   }
 }
