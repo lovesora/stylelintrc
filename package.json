@@ -20,7 +20,7 @@
     "url": "https://github.com/lovesora/stylelintrc/issues"
   },
   "homepage": "https://github.com/lovesora/stylelintrc#readme",
-  "dependencies": {
-    "stylelint-config-standard": "^18.0.0"
+  "devDependencies": {
+    "eslintrc": "^1.0.4"
   }
 }
