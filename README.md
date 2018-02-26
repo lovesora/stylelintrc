@@ -7,7 +7,7 @@ stylelintrc
 npm i -D stylelintrc
 ```
 
-## Step 2. Add `.stylelintrc` in your project root
+## Step 2. Copy `.stylelintrc` to your project root
 ```js
 {
   "extends": "stylelintrc"

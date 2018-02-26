@@ -1,9 +1,6 @@
 'use strict';
 
 module.exports = {
-  // 'plugins': [
-  //   'stylelint-scss',
-  // ],
   'rules': {
     // --------------------- Possible errors ---------------------
     // Color
