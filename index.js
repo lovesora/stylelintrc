@@ -61,10 +61,10 @@ module.exports = {
 
     // At-rule
     // 禁止无法识别的@语法
-    'at-rule-no-unknown': true,
-    // 'at-rule-no-unknown': {
-    //   'ignoreAtRules': ['else']
-    // },
+    // 'at-rule-no-unknown': true,
+    'at-rule-no-unknown': {
+      'ignoreAtRules': ['mixin', 'include']
+    },
 
     // Comment
     'comment-no-empty': true,
@@ -134,8 +134,8 @@ module.exports = {
     // Declaration
     // 如果可以简写的话就简写
     'declaration-block-no-redundant-longhand-properties': true,
-    // 禁止!important声明
-    'declaration-no-important': true,
+    // 允许!important声明
+    'declaration-no-important': false,
     // 'declaration-property-unit-blacklist': {
     //   '/^animation/': ['s']
     // },
